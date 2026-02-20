@@ -1,0 +1,165 @@
+.featured-section {
+  padding: 160px 0;
+  background: #ffffff;
+}
+
+.featured-container {
+  width: min(1300px, 92vw);
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.featured-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 120px auto;
+}
+
+.featured-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #2563eb;
+}
+
+.featured-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  margin-top: 1rem;
+  line-height: 1.1;
+}
+
+.featured-sub {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* LIST */
+
+.featured-list {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+
+/* ITEM */
+
+.featured-item {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.featured-item.reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.featured-item.reverse .featured-image {
+  order: 2;
+}
+
+.featured-item.reverse .featured-content {
+  order: 1;
+}
+
+/* IMAGE */
+
+.featured-image {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+  transition: transform 400ms ease;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-image:hover {
+  transform: scale(1.03);
+}
+
+/* CONTENT */
+
+.featured-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f97316;
+}
+
+.featured-content h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+.featured-desc {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* RESULTS */
+
+.featured-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.result-badge {
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #f97316);
+  color: white;
+}
+
+/* BUTTON */
+
+.featured-btn {
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: #111;
+  color: white;
+  transition: all 300ms ease;
+}
+
+.featured-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #f97316);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .featured-item,
+  .featured-item.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image,
+  .featured-content {
+    order: unset;
+  }
+
+  .featured-list {
+    gap: 100px;
+  }
+}

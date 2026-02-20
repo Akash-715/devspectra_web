@@ -1,0 +1,173 @@
+.services-page {
+  padding: 140px 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.06), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(249, 115, 22, 0.06), transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.services-container {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #2563eb;
+}
+
+.services-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.services-header p {
+  margin-top: 1rem;
+  color: #555;
+}
+
+/* CARDS ROW */
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 160px;
+  position: relative;
+}
+
+/* BIGGER CARDS */
+
+.service-card {
+  width: 380px;       /* Increased width */
+  height: 520px;      /* Adjusted proportionally */
+  border-radius: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  margin-left: -160px;  /* Stronger overlap since width increased */
+
+  transform: rotate(-12deg);
+  transition: all 0.4s ease;
+
+  box-shadow: 0 50px 100px rgba(0,0,0,0.2);
+}
+
+.service-card:first-child {
+  margin-left: 0;
+}
+
+/* FULL BLEED IMAGE */
+
+.service-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* BOTTOM WHITE TITLE STRIP */
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 120px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+
+  z-index: 2;
+}
+
+/* HOVER EFFECT */
+
+.service-card:hover {
+  transform: rotate(0deg) translateY(-25px) scale(1.05) !important;
+  z-index: 30;
+  box-shadow: 0 70px 140px rgba(0,0,0,0.28);
+}
+
+/* DETAIL */
+
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+
+.detail-section {
+  padding: 60px;
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.05),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.detail-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.detail-section p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.detail-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-section li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .cards-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .service-card {
+    transform: rotate(0deg) !important;
+  }
+
+  .detail-section {
+    padding: 35px;
+  }
+}

@@ -1,0 +1,198 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Farro:wght@300;400;500;700&family=Onest:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ---------------- GLOBAL RESET ---------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.mainNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.7rem 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  transition: all 300ms ease;
+}
+
+.mainNav.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------------- BRAND / LOGO ---------------- */
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 90px;
+  object-fit: contain;
+  transition: transform 300ms ease;
+}
+
+.brand img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------------- DESKTOP NAV LINKS ---------------- */
+
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.navLinks li {
+  list-style: none;
+}
+
+.navLinks a {
+  font-family: 'poppins';
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1e293b;
+  position: relative;
+  transition: color 250ms ease;
+}
+
+/* Hover underline animation */
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #0ea5e9);
+  transition: width 300ms ease;
+  border-radius: 5px;
+}
+
+.navLinks a:hover {
+  color: #0f172a;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* Active route highlight */
+.navLinks a.active {
+  color: #2563eb;   /* brand blue */
+}
+
+.navLinks a.active::after {
+  width: 100%;
+}
+
+
+/* ---------------- CTA BUTTON ---------------- */
+
+.cta-nav .btn-nav {
+  background: linear-gradient(135deg, #ccb0e0, #8e0ee9);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+  transition: all 250ms ease;
+}
+
+.btn-nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(99, 102, 241, 0.45);
+}
+
+/* ---------------- HAMBURGER ---------------- */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* ---------------- MOBILE MENU ---------------- */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(-100%);
+  transition: transform 300ms ease;
+  z-index: 999;
+}
+
+.menu.active {
+  transform: translateY(0);
+}
+
+.menu a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #1e293b;
+  transition: color 200ms ease;
+}
+
+.menu a:hover {
+  color: #6366f1;
+}
+
+/* Mobile CTA */
+.mobile-cta {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #6366f1, #0ea5e9);
+  color: white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+  .navLinks,
+  .cta-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .brand img {
+    height: 48px;
+  }
+}
