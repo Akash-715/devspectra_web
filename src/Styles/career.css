@@ -1,0 +1,217 @@
+.career-page {
+  padding: 140px 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.06), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(249, 115, 22, 0.06), transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.career-container {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.career-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.career-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #2563eb;
+}
+
+.career-header h1 {
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.career-header p {
+  margin-top: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* INTERNSHIP GRID */
+
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 140px;
+}
+
+/* CARD */
+
+.internship-card {
+  padding: 40px;
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.05),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  transition: all 0.3s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 60px 120px rgba(0,0,0,0.1);
+}
+
+.internship-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.duration {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.duration span {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.internship-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.internship-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.internship-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.apply-btn {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #f97316);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  transform: scale(1.05);
+}
+
+/* CV SECTION */
+
+.cv-section {
+  padding: 80px;
+  border-radius: 32px;
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.05),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  text-align: center;
+}
+
+.cv-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.cv-section p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.cv-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cv-input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  width: 300px;
+}
+
+.submit-btn {
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #f97316);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 320px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group select,
+.form-group input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .internship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-section {
+    padding: 40px;
+  }
+}

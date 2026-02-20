@@ -1,0 +1,88 @@
+.shuffle-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
+}
+
+/* STACKED ROW */
+
+.shuffle-row {
+  display: flex;
+  position: relative;
+}
+
+/* LARGE CARDS */
+
+.shuffle-card {
+  width: 380px;
+  height: 520px;
+  border-radius: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  margin-left: -160px;
+
+  transition: all 0.4s ease;
+
+  box-shadow: 0 50px 100px rgba(0,0,0,0.18);
+}
+
+.shuffle-card:first-child {
+  margin-left: 0;
+}
+
+/* FULL IMAGE */
+
+.shuffle-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* BOTTOM WHITE PANEL */
+
+.shuffle-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+/* HOVER STRAIGHTEN */
+
+.shuffle-card:hover {
+  transform: rotate(0deg) translateY(-25px) scale(1.05) !important;
+  z-index: 20;
+  box-shadow: 0 70px 140px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .shuffle-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .shuffle-card {
+    transform: rotate(0deg) !important;
+    margin-left: 0;
+  }
+}
